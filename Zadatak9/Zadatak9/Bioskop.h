@@ -71,7 +71,7 @@ double Bioskop<A_Type>::ProsekGodina() {
 
 	for (int i = 0; i < DimenzijaX; i++) {
 		for (int j = 0; j < DimenzijaY; j++) {
-			avg += Sedista[i, j]->VratiStarost();
+			avg += Sedista[i][j].VratiStarost();
 		}
 	}
 
@@ -86,8 +86,8 @@ double Bioskop<A_Type>::ProsecnaOcena() {
 
 	for (int i = 0; i < DimenzijaX; i++) {
 		for (int j = 0; j < DimenzijaY; j++) {
-			if (Sedista[i, j]->PrisutanQ()) {
-				avg += Sedista[i, j]->VratiOcenu();
+			if (Sedista[i][j].PrisutanQ()) {
+				avg += Sedista[i][j].VratiOcenu();
 			}
 		}
 	}
